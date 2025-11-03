@@ -39,3 +39,5 @@ class Solution {
       
     }
 }
+
+//https://www.youtube.com/watch?v=IfBNFgv7DDc&t=12s
