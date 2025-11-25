@@ -5,8 +5,9 @@ class Solution {
         long n=0;
         for(int i=0;i<l;i++){
            int bit=nums[i];
-                n=(n<<1)%5;
-                n+=bit;
+                n=(n<<1);
+                n=(n+bit)%5;
+                
                 if(n%5==0){
                     ans.add(true);
                 }else{
