@@ -36,7 +36,7 @@ class Solution {
         for(int i=0;i<b.length;i++){
       int r=b[i][0];
       int c=b[i][1];
-      if (mmrow[r][0] < c && c < mmrow[r][1] &&
+      if (c>mmrow[r][0]  && c < mmrow[r][1] &&
     mmcol[c][0] < r && r < mmcol[c][1]) {
     count++;
 }
