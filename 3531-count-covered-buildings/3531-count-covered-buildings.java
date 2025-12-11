@@ -31,28 +31,7 @@ class Solution {
             mmcol[c][1]=Math.max(mmcol[c][1],r);
             }
         }
-        for(int i=0;i<=n;i++){
-            if(mmrow[i][0]==0){
-                mmrow[i][0]=Integer.MAX_VALUE;
-            }
-            if(mmrow[i][1]==0){
-                mmrow[i][1]=Integer.MIN_VALUE;
-            }
-             if(mmcol[i][0]==0){
-                mmcol[i][0]=Integer.MAX_VALUE;
-            }
-            if(mmcol[i][1]==0){
-                mmcol[i][1]=Integer.MIN_VALUE;
-            }
-        }
-
-        for(int i=0;i<=n;i++){
-            System.out.println(i);
-            System.out.println(mmrow[i][0]+" "+mmrow[i][1]);
-        }
-        for(int i=0;i<=n;i++){
-            System.out.println(mmcol[i][0]+" "+mmcol[i][1]);
-        }
+        
         int count=0;
         for(int i=0;i<b.length;i++){
       int r=b[i][0];
