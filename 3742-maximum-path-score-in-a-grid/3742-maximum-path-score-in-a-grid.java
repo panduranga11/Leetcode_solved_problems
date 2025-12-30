@@ -45,7 +45,8 @@ class Solution {
             }
         }
 
-        int rs, ls;
+        int rs=0;
+        int ls=0;
 
         if (grid[i][j] == 0) {
             rs = grid[i][j] + solve(grid, k, i, j + 1, cost);
