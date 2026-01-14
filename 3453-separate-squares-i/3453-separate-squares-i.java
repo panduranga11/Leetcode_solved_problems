@@ -1,42 +1,39 @@
 class Solution {
     public double separateSquares(int[][] squares) {
-        double low = Double.MAX_VALUE, high = 0;
-
-        for (int[] s : squares) {
-            low = Math.min(low, s[1]);
-            high = Math.max(high, (double)s[1] + s[2]);
+        double y = 0; double totalArea = 0;
+        double min = Double.MAX_VALUE; double max = Double.MIN_VALUE;
+        for(int square[]: squares){
+            double len = square[2];
+            totalArea += len * len;
+            min = Math.min(min, square[1]);
+            max = Math.max(max, square[1] + square[2]);
         }
-
-        for (int iter = 0; iter < 60; iter++) {
-            double mid = (low + high) / 2.0;
-            double diff = areaDiff(squares, mid);
-
-            if (diff >= 0) {
-                high = mid;
-            } else {
+        double target = totalArea/2;
+        double low = min; double high = max;
+        while(low < high){
+            if(high - low < Math.pow(10, -5)){
+                break;
+            }
+            double mid = (low + high)/2;
+            if(areaBelow(mid, squares) < target){
                 low = mid;
-            }
-        }
-        return low;
-    }
-
-    private double areaDiff(int[][] squares, double Y) {
-        double below = 0, above = 0;
-
-        for (int[] s : squares) {
-            double y = s[1], l = s[2];
-            double top = y + l;
-            double area = l * l;
-
-            if (Y <= y) {
-                above += area;
-            } else if (Y >= top) {
-                below += area;
             } else {
-                below += (Y - y) * l;
-                above += (top - Y) * l;
+                y =  mid;
+                high = mid;
             }
         }
-        return below - above;
+        return y;
+    }
+    public double areaBelow(double mid, int squares[][]){
+        double area = 0;
+        for(int square[]: squares){
+            double y = square[1], len = square[2];
+            if(mid >= y + len){
+                area += len * len;
+            } else if((mid > y) && (mid < y+len)){
+                area += len * (mid - y);
+            }
+        }
+        return area;
     }
 }
