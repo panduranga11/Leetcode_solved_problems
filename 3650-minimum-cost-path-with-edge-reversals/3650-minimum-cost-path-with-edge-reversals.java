@@ -44,7 +44,8 @@ while(!pq.isEmpty()){
         }
     }
 }
-return dis[n-1];
+System.out.println(Arrays.toString(dis));
+return dis[n-1]==2147483647?-1:dis[n-1];
 
 
     }
