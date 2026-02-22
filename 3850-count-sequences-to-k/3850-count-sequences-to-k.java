@@ -24,13 +24,13 @@ class Solution {
         long ans=0;
         long mulnum=num*nums[ind];
         long mulden=den;
-        
-        long mul=solve(ind+1,nums,tar,mulnum,mulden,map);
+        long g1=gcd(Math.abs(mulnum),Math.abs(mulden));
+        long mul=solve(ind+1,nums,tar,mulnum/g1,mulden/g1,map);
         long divnum=num;
         long divden=den*nums[ind];
-        
+        long g2=gcd(Math.abs(divnum),Math.abs(divden));
 
-        long div=solve(ind+1,nums,tar,divnum,divden,map);
+        long div=solve(ind+1,nums,tar,divnum/g2,divden/g2,map);
         
         long same=solve(ind+1,nums,tar,num,den,map);
         ans = (mul + div + same);
@@ -40,5 +40,7 @@ class Solution {
     
         
     }
-     
+     public  long gcd(long a, long b) {
+        return b == 0 ? a : gcd(b, a % b);
+    }
 }
