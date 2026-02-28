@@ -15,24 +15,24 @@
  */
 class Solution {
     public int sumRootToLeaf(TreeNode root) {
-return sum(root,"");
+return sum(root,0);
 
         
     }
-    public int sum(TreeNode root,String s){
+    public int sum(TreeNode root,int c){
         
         if(root.left==null && root.right==null){
-            s+=root.val;
-            return Integer.parseInt(s,2);
+           
+            return c<<1 |root.val;
         }
         
         int s1=0;
         int s2=0;
         if(root.left!=null){
-         s1=sum(root.left,s+root.val);
+         s1=sum(root.left,(c<<1) |root.val);
         }
         if(root.right!= null){
-         s2=sum(root.right,s+root.val);
+         s2=sum(root.right,(c<<1) |root.val);
         }
         return s1+s2;
 
