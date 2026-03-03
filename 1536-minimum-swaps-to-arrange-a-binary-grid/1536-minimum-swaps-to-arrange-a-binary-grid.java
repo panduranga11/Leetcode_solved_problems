@@ -14,7 +14,7 @@ class Solution {
             }
             arr[i]=c;
         }
-        System.out.println(Arrays.toString(arr));
+        
         int ans=0;
         for(int i=0;i<n;i++){
             int req=n-i-1;
