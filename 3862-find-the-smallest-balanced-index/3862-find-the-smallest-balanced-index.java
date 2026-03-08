@@ -13,10 +13,14 @@ class Solution {
             prod=prod*nums[n-i-1];
             sufp[n-i-1]=prod;
         }
+        System.out.println(Arrays.toString(pres));
+        System.out.println(Arrays.toString(sufp));
        for(int i=0;i<n;i++){
         long left=i==0?0:pres[i-1];
         long right=i==n-1?1:sufp[i+1];
         if(left==right && i!=0){
+            System.out.println(left);
+            System.out.println(right);
             return i;
         }
        }
