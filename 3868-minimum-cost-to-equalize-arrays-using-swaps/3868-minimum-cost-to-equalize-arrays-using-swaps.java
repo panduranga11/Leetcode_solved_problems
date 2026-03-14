@@ -38,7 +38,7 @@ class Solution {
             a2+=Math.max(0,m1-half);
           
         }
-        return a1;
+        return a2;
        
         
 }
