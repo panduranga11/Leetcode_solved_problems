@@ -23,7 +23,7 @@ class Solution {
         int ans=0;
        
         int a1=0;
-        int a2=0;
+      
         for(int i:map1.keySet()){
             int m1=map1.get(i);
             int t1=map.get(i);
@@ -31,14 +31,9 @@ class Solution {
             a1+=Math.max(0,m1-half);
 
         }
-        for(int i:map2.keySet()){
-              int m1=map2.get(i);
-            int t1=map.get(i);
-            int half=t1/2;
-            a2+=Math.max(0,m1-half);
-          
-        }
-        return a2;
+        return a1;
+        
+    
        
         
 }
