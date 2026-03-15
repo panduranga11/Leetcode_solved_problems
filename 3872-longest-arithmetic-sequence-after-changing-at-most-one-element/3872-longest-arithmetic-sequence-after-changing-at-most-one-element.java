@@ -33,8 +33,8 @@ class Solution {
             }
         }
         
-        System.out.println(Arrays.toString(p));
-         System.out.println(Arrays.toString(s));
+       // System.out.println(Arrays.toString(p));
+        // System.out.println(Arrays.toString(s));
         int maxlen=1;
 
         for(int i=0;i<n;i++){
