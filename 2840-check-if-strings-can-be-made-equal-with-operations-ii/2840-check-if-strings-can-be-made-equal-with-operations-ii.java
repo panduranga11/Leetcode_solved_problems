@@ -20,13 +20,19 @@ class Solution {
             if(i%2==0){
 epos.put(c1,epos.getOrDefault(c1,0)+1);
             }else{
-opos.put(c1,epos.getOrDefault(c1,0)+1);
+opos.put(c1,opos.getOrDefault(c1,0)+1);
             }
            }
            
 
 
         }
+    for(char cc:epos.keySet()){
+        System.out.println(cc+" "+epos.get(cc));
+    }
+    for(char cc:opos.keySet()){
+        System.out.println(cc+" "+opos.get(cc));
+    }
         for(int i=0;i<26;i++){
             if(f1[i]!=f2[i]){
                 return false;
@@ -40,13 +46,19 @@ opos.put(c1,epos.getOrDefault(c1,0)+1);
                     if(epos.containsKey(c2) && epos.get(c2)>0){
                         epos.put(c2,epos.get(c2)-1);
                     }else{
+                        System.out.println(i);
                         return false;
                     }
                 }else{
+                    if(i==7){
+                        System.out.println(opos.get(c2));
+                    }
                      if(opos.containsKey(c2) && opos.get(c2)>0){
                         opos.put(c2,opos.get(c2)-1);
                     }else{
+                        System.out.println(i);
                         return false;
+                         
                     }
 
                 }
