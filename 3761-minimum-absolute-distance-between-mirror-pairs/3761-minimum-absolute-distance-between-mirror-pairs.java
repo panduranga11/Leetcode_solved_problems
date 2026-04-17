@@ -32,6 +32,11 @@ public int rev(int num){
     }
     return ans;
 }
-
+public int rtz(int num){
+    while(num >0 && num%10==0){
+        num=num/10;
+    }
+    return num;
+}
 
 }
