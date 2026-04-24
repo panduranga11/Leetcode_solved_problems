@@ -9,11 +9,6 @@ class Solution {
             ans.add(0);
             return ans;
         }
-        if(n==2){
-            ans.add(0);
-            ans.add(1);
-            return ans;
-        }
       
 
         for(int i=0;i<n;i++){
@@ -55,10 +50,8 @@ class Solution {
             }
         }
             
-            for(int i=0;i<n;i++){
-                if(degree[i]>0){
-                    ans.add(i);
-                }
+            while(!q.isEmpty()){
+                ans.add(q.poll());
             }
             return ans;
 
