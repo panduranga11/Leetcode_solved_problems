@@ -23,7 +23,7 @@ class Solution {
         first=null;
         last=null;
         middle=null;
-        prev=new TreeNode(Integer.MIN_VALUE);
+        prev=null;
         inorder(root);
         if(first !=null &&last!=null){
              int t=last.val;
