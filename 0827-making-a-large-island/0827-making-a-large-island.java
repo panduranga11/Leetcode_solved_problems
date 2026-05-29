@@ -23,7 +23,7 @@ class Solution {
             }
         }
        }
-       System.out.println(map);
+      // System.out.println(map);
        for(int i=0;i<m;i++){
         for(int j=0;j<n;j++){
             if(grid[i][j]==0){
