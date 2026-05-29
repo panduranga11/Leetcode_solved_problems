@@ -35,7 +35,7 @@ class Solution {
             int nr=i+dr[k];
             int nc=j+dc[k];
         if(nr>=0 && nc>=0 && nr<grid.length && nc<grid[0].length){
-            if(map.containsKey(grid[nr][nc])){
+            if(grid[nr][nc]!=0){
             if(!set.contains(grid[nr][nc])){
             cur+=map.get(grid[nr][nc]);
             set.add(grid[nr][nc]);
