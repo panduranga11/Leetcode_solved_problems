@@ -3,7 +3,7 @@ class Solution {
 int n=nums.length;
 
         int dp[][]=new int[n+1][n+1];
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n+1;i++){
             Arrays.fill(dp[i],-1);
         }
         return solve(0, nums.length - 1, nums,dp);
