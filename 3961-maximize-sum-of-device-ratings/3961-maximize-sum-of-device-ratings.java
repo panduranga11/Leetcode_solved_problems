@@ -1,6 +1,7 @@
 class Solution {
     public long maxRatings(int[][] units) {
 int n=units.length;
+
 int fis[]=new int[n];
 int sec[]=new int[n];
 for(int i=0;i<n;i++){
@@ -15,6 +16,8 @@ for(int i=0;i<n;i++){
 int min=1000000;
 long sum=0;
 int gmin=1000000;
+//if we move to differnt pos it may effect the ans of its rating so move to a place common 
+
 // System.out.println(Arrays.toString(fis));
 // System.out.println(Arrays.toString(sec));
 for(int i=0;i<n;i++){
