@@ -37,7 +37,7 @@ ind++;
         }
 
     
-System.out.println(ls);
+//System.out.println(ls);
     while(!q.isEmpty()){
         int nn=q.poll();
         for(int i:ls.get(nn)){
