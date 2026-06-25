@@ -32,9 +32,7 @@ ind++;
         }
         //System.out.println(q);
         //System.out.println(Arrays.toString(inorder));
-        if(q.isEmpty()){
-            return new int []{};
-        }
+       
 
     
 //System.out.println(ls);
