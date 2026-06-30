@@ -15,4 +15,4 @@ SELECT  DATE_FORMAT(trans_date,'%Y-%m') as month ,country,COUNT(*) AS trans_coun
     END
 ) as approved_total_amount
 FROM  Transactions 
-GROUP BY DATE_FORMAT(trans_date,'%Y-%m'),country;
+GROUP BY month,country;
