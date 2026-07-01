@@ -25,10 +25,10 @@ class Solution {
             return;
         }
         inorder(root.left,k);
-        System.out.println(root.val+" "+ind);
+        //System.out.println(root.val+" "+ind);
         if(ind==k){
           ans=root.val;
-          System.out.println(ans);
+         // System.out.println(ans);
            
         }
          ind++;
