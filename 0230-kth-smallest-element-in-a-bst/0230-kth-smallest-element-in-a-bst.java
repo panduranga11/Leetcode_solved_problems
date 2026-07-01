@@ -24,10 +24,14 @@ class Solution {
         if(root==null){
             return;
         }
+        
         inorder(root.left,k);
-        //System.out.println(root.val+" "+ind);
+        System.out.println(root.val+" "+ind);
+        
         if(ind==k){
           ans=root.val;
+          ind++;
+          return;
          // System.out.println(ans);
            
         }
