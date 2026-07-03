@@ -10,3 +10,4 @@ WHERE product_id=u.product_id  AND change_date <='2019-08-16'
 
 
 
+
