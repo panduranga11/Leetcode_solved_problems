@@ -1,7 +1,7 @@
 SELECT ROUND(
            COUNT(*) /
-            (SELECT COUNT(*) FROM 
-            (SELECT DISTINCT player_id FROM Activity) as x),
+            (SELECT COUNT(DISTINCT player_id) FROM Activity)
+            ,
            2
        ) AS fraction
 FROM
