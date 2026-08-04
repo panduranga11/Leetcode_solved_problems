@@ -24,15 +24,13 @@ class Solution {
             }else{
                 cur=shifts[i];
             }
-           try{ 
+           
          long pos=map.floorKey(cur)!=null?map.floorKey(cur):-1;
          prev=pos!=-1?map.get(pos):-1;
          ans[i]=n-prev-1;
          
             
-           }catch(Exception e){
-            System.out.println(e);
-           }
+           
       
         }
         return ans;
