@@ -33,10 +33,10 @@ ans+=map.get(key)-1;
         return ans;
     }
     public int find(int []par,int node){
-        if(par[node]==node){
-return node;
+        if(par[node]!=node){
+return par[node]=find(par,par[node]);
         }
-        return par[node]=find(par,par[node]);
+        return node;
     }
     public void union(int []par,int []rank,int a,int b){
         int p1=find(par,a);
