@@ -21,7 +21,7 @@ class Solution {
         HashMap<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<n;i++){
             int pp=find(par,i);
-            System.out.println(pp);
+            //System.out.println(pp);
             map.put(pp,map.getOrDefault(pp,0)+1);
         }
         System.out.println(map);
