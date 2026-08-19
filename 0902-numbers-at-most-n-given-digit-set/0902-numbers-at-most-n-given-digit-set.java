@@ -31,19 +31,21 @@ max=Math.max(max,k);
             return dp[ind][std][t];
         }
         int ans=0;
-        if(std==0){
-            ans+=solve(ind+1,0,set,c,max,std,dp);
-        }
+      
 
         int end=t==1?c[ind]-'0':9;
         //System.out.println(end);
-        for(int i=1;i<=end;i++){
+        for(int i=0;i<=end;i++){
+              if(i==0 && std==0){
+            ans+=solve(ind+1,0,set,c,max,std,dp);
+        }else{
             if(set.contains(i) && i<=max ){
             int nt=t==1 && i==end ?1:0;
             //System.out.println("ind "+ind+" :"+i);
 ans+=solve(ind+1,nt,set,c,max,1,dp);
         }
     }
+        }
     return dp[ind][std][t]=ans;
 }
 }
