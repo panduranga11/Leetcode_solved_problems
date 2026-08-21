@@ -15,11 +15,7 @@ int dp[]=new int[env.length];
        
        for(int i=0;i<n;i++){
         int x=env[i][1];
-        if(len==0){
-            dp[len]=x;
-            len++;
-
-        }else{
+        
             int pos=bs(dp,x,len);
             if(pos==len){
             len++;
@@ -28,7 +24,7 @@ int dp[]=new int[env.length];
                 dp[pos]=x;
             }
 
-        }
+        
 
 
 
