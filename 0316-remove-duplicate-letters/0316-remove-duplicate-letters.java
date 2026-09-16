@@ -16,7 +16,7 @@ ch[c-'a']++;
             if(!st.contains(c)){
             st.push(c);
             }
-           System.out.println(st);
+           //System.out.println(st);
         }
         StringBuilder sb=new StringBuilder();
         while(!st.isEmpty()){
